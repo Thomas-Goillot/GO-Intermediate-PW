@@ -1,3 +1,9 @@
+/*
+Thomas GOILLOT
+2A3
+25/11/2022
+*/
+
 package main
 
 import (
@@ -109,7 +115,6 @@ func semiCapitalizeSentenceHandler(w http.ResponseWriter, req *http.Request) {
 		sentence := req.FormValue("sentence")
 
 		for i := 0; i < len(sentence); i++ {
-			fmt.Println(sentence[i])
 			if i%2 == 0 {
 				sentence = sentence[:i] + strings.ToUpper(string(sentence[i])) + sentence[i+1:]
 			}
